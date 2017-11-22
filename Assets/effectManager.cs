@@ -6,11 +6,20 @@ public class effectManager : MonoBehaviour
 {
 
 	 public GameObject parts;
+
+	 //この値でYの高さを調節（LifeLineよりも時間を長くすると変に見えるようになるので気を付けるように）
 	 public AnimationCurve Line;
+
+	 //この値で横の幅を調節（LifeLineよりも時間を長くすると変に見えるようになるので気を付けるように）
 	 public AnimationCurve Z_Line;
 
 	 float curvePosi_Z;
 	 float curvePosi_Y;
+
+	 //遅延させ多くインスタンスが生成されるのを制御しようと思ったが
+	 //消滅させているのでそこまで多く作られることがないため、あまり必要ないかも
+	 //ライフタイムの時間が長くなる時には調節が聞いていいかも
+	 public float PopDilay_time;
 
 	 Vector3 Line_posi;
 
@@ -24,8 +33,7 @@ public class effectManager : MonoBehaviour
 		  StartCoroutine("popeffect");
 
 	 }
-
-
+	 
 	 IEnumerator popeffect()
 	 {
 		  while (hantei)
@@ -39,7 +47,7 @@ public class effectManager : MonoBehaviour
 			   obj = Instantiate(parts, Line_posi, Quaternion.identity);
 			   obj.transform.parent = gameObject.transform;
 
-			   yield return new WaitForSeconds(0.01f);
+			   yield return new WaitForSeconds(PopDilay_time);
 			   hantei = true;
 		  }
 	 }
