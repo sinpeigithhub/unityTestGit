@@ -81,25 +81,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8280fc66c13cd41a635b6f7405cbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emittCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  effctpop: {fileID: 1348218321639996, guid: cd6d321826fe3a64f8dbd7bb393ef99b, type: 2}
   rotateSpeed: 10
 --- !u!114 &114823599829869546
 MonoBehaviour:
@@ -155,4 +136,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 1
     m_RotationOrder: 0
-  PopDilay_time: 0.001
+  PopDilay_time: 0.3
